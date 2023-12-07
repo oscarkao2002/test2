@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>GEPT Words 單字測驗 ASP.NET 程式開發心得</h1>
+    作者：學號：CBF110005 姓名：高璟譽
+
+
+    <h2>開發思路與解決方案</h2>
+    在這裡，你可以描述你在開發過程中的思考過程，以及你如何解決問題的。
+    <h3>以老師的程式做修改，如有發現跟之前影片相似的部分，則會回到之前影片作複習
+		還是無法解決的話，則是會到w3school、google等地搜尋結果，或使用AI機器人
+		如：chat gpt等...</h3>
+    <h3>當遇到不會的部分，會使用w3school、google、chat gpt、e-class影片或課本等</h3>
+
+    <h2>使用的技術與引用來源</h2>
+    在這裡，你可以列出你在開發過程中使用到的技術，以及你參考的資料來源。
+	<h3>按下button後將view1轉換到view2，將sentence欄位充滿整個儲存格，view2的textbox會有提示字元</h3>
+    <h3>w3school、google、chat gpt、e-class影片或課本</h3>
+
+    <h2>遇到的問題與解決方法</h2>
+    在這裡，你可以分享你在開發過程中遇到的問題，以及你是如何解決這些問題的。
+    <h3>一開始不知道為什麼一直運行失敗，但它後來自己好了，不會設計警示框，更因無法執行，view無法切換，提示字元無法顯示</h3>
+    <h3>w3school、google、chat gpt、e-class影片或課本</h3>
+
+    <h2><asp:GridView ID="CBF110005_GV1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" EmptyDataText="沒有資料錄可顯示。" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None" OnRowDeleting="CBF110005_GV1_RowDeleting">
+                <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                <Columns>
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:BoundField DataField="word" HeaderText="word" SortExpression="word" />
+                    <asp:BoundField DataField="ch_explanation" HeaderText="ch_explanation" SortExpression="ch_explanation" />
+                    <asp:BoundField DataField="sentence" HeaderText="sentence" SortExpression="sentence" />
+                    <asp:BoundField DataField="sno" HeaderText="sno" SortExpression="sno" />
+                    <asp:BoundField DataField="level" HeaderText="level" SortExpression="level" />
+                </Columns>
+                <FooterStyle BackColor="Tan" />
+                <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+            </asp:GridView></h2>
+    在這裡，你可以分享你修改後的程式碼，並解釋你做了哪些改變。
+    <h3> <EditItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="更新"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="取消"></asp:LinkButton>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="編輯"></asp:LinkButton>
+                            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Delete" OnClientClick="return confirm('你確定要刪除嗎?')" Text="刪除"></asp:LinkButton>
+                        </ItemTemplate>
+                        <ItemStyle Wrap="False" />
+                    </asp:TemplateField>
+                    <asp:BoundField DataField="word" HeaderText="word" SortExpression="word" />
+                    <asp:BoundField DataField="ch_explanation" HeaderText="ch_explanation" SortExpression="ch_explanation" />
+                   <asp:TemplateField HeaderText="sentence" SortExpression="sentence">
+                    <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='%# Bind("sentence") %' TextMode="MultiLine" style="width: 98%;"></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='%# Bind("sentence") %'></asp:Label>
+                    </ItemTemplate>
+                    </asp:TemplateField></h3>
+    <h3>基本轉為TemplateField後再結合chat gpt給的建議去修改</h3>
+
+    <h2><img src="C:\Users\user\Desktop/111.png" alt="描述圖片的文字"></h2>
+    在這裡，你可以分享你的程式執行畫面，並解釋每個畫面的功能。
+    <h3>按下button後將view1轉換到view2，將sentence欄位充滿整個儲存格，view2的textbox會有提示字元</h3>
+    
+
+    <h2>個人心得與反思</h2>
+    在這裡，你可以分享你對於這次開發經驗的感想，以及你從中學到了什麼。
+    <h3>個人覺得這次的作業非常困難，雖然最後還是沒有做出完整的網頁，但我個人認為我已仁至義盡
+		在這次的作業中我學到非常多</h3>
+    <h3>真心發掘到自己還是很淺，希望可以在程式的路上走得更遠</h3>
+
+
+</body>
+</html>
